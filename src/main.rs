@@ -15,6 +15,7 @@ fn App() -> Element {
     rsx! {
         link { rel: "stylesheet", href: "styles/main.css" }
         script { src: "scripts/p5.min.js" }
+        script { src: "scripts/constants.js" }
         script { src: "scripts/sketch.js" }
         script { src: "scripts/bird.js" }
         script { src: "scripts/pipe.js" }

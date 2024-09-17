@@ -1,26 +1,22 @@
 function Bird() {
-  var graphics_up = loadImage("assets/images/bird_up.png");
-  var graphics_down = loadImage("assets/images/bird_down.png");
-  var graphics;
+  var graphicsUp = loadImage("assets/images/bird_up.png");
+  var graphicsDown = loadImage("assets/images/bird_down.png");
 
   this.x = width;
   this.y = random(100, height - 200);
 
-  this.width = 42;
-  this.height = 30;
+  this.width = birdWidth;
+  this.height = birdHeight;
 
-  this.wiggle = 10;
+  this.wiggle = birdWiggle;
 
   this.update = function () {
-    this.x += movementSpeed;
-
+    this.x -= movementSpeed;
     this.y += sin(frameCount / this.wiggle) * 0.5;
   };
 
   this.show = function () {
-    if (int(frameCount / 10) % 2 == 0) graphics = graphics_up;
-    else graphics = graphics_down;
-
+    var graphics = int(frameCount / 10) % 2 == 0 ? graphicsUp : graphicsDown;
     image(graphics, this.x, this.y, this.width, this.height);
   };
 

@@ -1,10 +1,10 @@
 function Pipe() {
-  graphics_body = loadImage("assets/images/pipe_body.png");
-  graphics_up = loadImage("assets/images/pipe_up.png");
-  graphics_down = loadImage("assets/images/pipe_down.png");
+  graphicsBody = loadImage("assets/images/pipe_body.png");
+  graphicsUp = loadImage("assets/images/pipe_up.png");
+  graphicsDown = loadImage("assets/images/pipe_down.png");
 
   this.x = 60;
-  this.thickness = 40;
+  this.thickness = pipeThickness;
   this.endSize = 19;
   this.cutSize = 100;
   this.cutPos = height / 2;
@@ -19,9 +19,9 @@ function Pipe() {
   };
 
   this.show = function () {
-    image(graphics_body, this.x, 0, this.thickness, this.cutPos - this.endSize);
+    image(graphicsBody, this.x, 0, this.thickness, this.cutPos - this.endSize);
     image(
-      graphics_up,
+      graphicsUp,
       this.x,
       this.cutPos - this.endSize,
       this.thickness,
@@ -29,14 +29,15 @@ function Pipe() {
     );
 
     image(
-      graphics_down,
+      graphicsDown,
       this.x,
       this.cutPos + this.cutSize,
       this.thickness,
       this.endSize
     );
+
     image(
-      graphics_body,
+      graphicsBody,
       this.x,
       this.cutPos + this.cutSize + this.endSize,
       this.thickness,

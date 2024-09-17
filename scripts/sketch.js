@@ -3,8 +3,6 @@ var birds = [];
 let score = 0;
 let highScore = 0;
 
-let movementSpeed = -2;
-
 var backgroundImage;
 var ground;
 
@@ -12,14 +10,14 @@ let groundHeight = 80;
 
 let birdSpawn = 0;
 
-var game_over;
-let game_over_width = 400;
-let game_over_height = 200;
+var gameOverScreen;
+let gameOverScreenWidth = 400;
+let gameOverScreenHeight = 200;
 
 let fontRegular;
 
 function preload() {
-  game_over = loadImage("assets/images/game_over.png");
+  gameOverScreen = loadImage("assets/images/game_over.png");
   fontRegular = loadFont("assets/fonts/04B_19.TTF");
 }
 
@@ -77,11 +75,11 @@ function draw() {
       birdSpawn = 0;
 
       image(
-        game_over,
-        width / 2 - game_over_width / 2,
-        height / 2 - game_over_height / 2,
-        game_over_width,
-        game_over_height
+        gameOverScreen,
+        width / 2 - gameOverScreenWidth / 2,
+        height / 2 - gameOverScreenHeight / 2,
+        gameOverScreenWidth,
+        gameOverScreenHeight
       );
 
       noLoop();

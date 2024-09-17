@@ -3,7 +3,7 @@ function Ground() {
   var graphics = loadImage("assets/images/ground.png");
 
   this.update = function () {
-    this.x += movementSpeed;
+    this.x -= movementSpeed;
 
     if (this.x <= -width) this.x = 0;
   };

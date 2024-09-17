@@ -1,7 +1,15 @@
-# Development
+# Dioxus RFB
 
-Run the following command in the root of the project to start the Dioxus dev server:
+Reverse Flappy Bird but in Rust + Dioxus
+
+If you have `just`, run using the following command.
 
 ```bash
-dx serve --hot-reload --platform desktop
+just run
+```
+
+If you don't have `just`, run it using the following command:
+
+```bash
+dx serve
 ```
