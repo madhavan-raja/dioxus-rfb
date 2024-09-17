@@ -2,7 +2,7 @@
 
 Reverse Flappy Bird but in Rust + Dioxus
 
-If you have `just`, run using the following command.
+If you have `just`, run it using the following command:
 
 ```bash
 just run
